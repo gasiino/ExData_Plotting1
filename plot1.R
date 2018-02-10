@@ -14,7 +14,7 @@ if(!file.exists("household_power_consumption.zip") && !file.exists("household_po
 if(file.exists("household_power_consumption.zip") && !file.exists("household_power_consumption.txt")) { 
   unzip("household_power_consumption.zip") 
 }
-## read whole txt file, then select only the rows using %like% and regex on Date column to get only 01 feb and 2 feb 2007
+## read whole txt file, then select only the rows using %like% and regex on Date column to get only 1 feb and 2 feb 2007
 dt<-fread("household_power_consumption.txt", header=TRUE, na.strings="?", sep = ";")[Date %like% "^[0]{0,1}[12]/[0]{0,1}2/2007"]
 
 ## create png file with desired size
