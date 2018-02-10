@@ -24,7 +24,7 @@ png(filename="plot1.png", width=480, height=480, units="px")
 histcolor<-"red"
 
 ## add histogram
-hist(dt$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)",col=histcolor)
+with(dt, hist(Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", col=histcolor))
 
 ## close device and save file
 dev.off()
